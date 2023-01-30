@@ -1,17 +1,22 @@
 #include <stdio.h>
-/*We will write the alphabet out followed by a new line*/
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - We will write the alphabet out followed by a new line
+ *
+ *Return: always 0
+ */
 
 int main(void)
 {
-char ch;
-
-for
-("ch='a' ; ch<='z'");
-
+char z = 'a';
+while (z <= 'z')
 {
-putchar(ch);
-ch++;
+putchar(z);
+z++;
 }
-putchar('\n')
+putchar('\n');
+
 return (0);
 }
