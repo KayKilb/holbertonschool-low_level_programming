@@ -5,7 +5,6 @@
  * @n: input number of time to print '_'
  * Return: an underscore
  */
-
 void print_line(int n)
 {
 	int co;
@@ -16,7 +15,7 @@ void print_line(int n)
 	}
 	else
 	{
-		for (co = 1; co <= 0; co++)
+		for (co = 1; co <= n; co++)
 		{
 			_putchar('_');
 		}
