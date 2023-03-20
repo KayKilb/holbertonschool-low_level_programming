@@ -1,12 +1,13 @@
 #include "lists.h"
 #include "2-add_nodeint.c"
 /**
- * insert_nodeint_at_index - Entry Point
- * @head: head
- * @idx: index
- * @n: data
- * Return: address of new node, or NULL upon failure
- */
+* insert_nodeint_at_index - inserts new node at index idx
+* @head: head
+* @n: data
+* @idx: index
+*
+* Return: address of new node, or NULL upon failure
+*/
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp, *new;
@@ -15,7 +16,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (idx == 0)
 	{
 		add_nodeint(head, n);
-		return (NULL);
+		return (*head);
 	}
 	temp = *head;
 	while (count < idx - 1)
