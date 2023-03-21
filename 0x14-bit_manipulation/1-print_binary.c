@@ -14,6 +14,7 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
+
 	tmp = n;
 
 	while (tmp != 0)
@@ -30,5 +31,4 @@ void print_binary(unsigned long int n)
 		else
 			printf("0");
 	}
-
 }
