@@ -1,25 +1,25 @@
 #include "main.h"
 /**
- * print_binary - Entry Point
- * @n: dec input
- * Return: 0
+ * print_binary - prints binary representation
+ * of a number
+ * @n: unsigned long int
+ * Return: 0 or 1
  */
 void print_binary(unsigned long int n)
 {
-	int i = 0, count, k, temp;
+	int i = 0, count, k, tmp;
 
 	if (n == 0)
 	{
 		printf("0");
 		return;
 	}
+	tmp = n;
 
-	temp = n;
-
-	while (temp != 0)
+	while (tmp != 0)
 	{
 		i++;
-		temp = temp >> 1;
+		tmp = tmp >> 1;
 	}
 
 	for (count = i - 1; count >= 0; count--)
@@ -30,4 +30,5 @@ void print_binary(unsigned long int n)
 		else
 			printf("0");
 	}
+
 }
