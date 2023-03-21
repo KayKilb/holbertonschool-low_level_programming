@@ -1,19 +1,16 @@
+#include <string.h>
+#include <math.h>
 #include "main.h"
 /**
- * get_bit - entry point
- * @n: input
- * @index: index
- * Return: the value of the bit at index
- * or -1 if an error occured
- */
+ * get_bit - returns value of a bit at a given index
+ * @n: number to convert
+ * @index: index of bit to be returned
+ * Return: the value of bit at index or -1 if error
+*/
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int bits;
-
-	bits = (n >> index) & 1;
-
-	if ((bits == 1) || (bits == 0))
-		return (bits);
-	else
+	if (index > (sizeof(n) * 8))
 		return (-1);
+
+	return ((n >> index) & 1);
 }
